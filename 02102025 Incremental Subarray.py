@@ -48,3 +48,4 @@ for i in range(int(input())):
 
     num_subarrays = count_subarrays(JamesArray, favorityNumber)
     print(num_subarrays)
+    
