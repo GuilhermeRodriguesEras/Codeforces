@@ -1,13 +1,8 @@
-from pulp import *
+import math
 
-prob = LpProblem("Simple_Problem", LpMinimize)
-x1 = LpVariable("x1", lowBound=0)
-x2 = LpVariable("x2", lowBound=0)
+values = list(map(int, input().split()))
+n, m, a = values[0],  values[1], values[2]
 
-prob += x1 + 3*x2
-prob += x1 + 2*x2 >= 6
-prob += x1 - x2 <= 3
+necessaryFlagstones  = math.ceil(n/a) * math.ceil(m/a)
 
-prob.solve()
-
-print ('x1={} , x2 ={}'.format(value(x1), value(x2)))
+print(necessaryFlagstones)
