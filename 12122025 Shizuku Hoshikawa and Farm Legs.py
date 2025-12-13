@@ -4,10 +4,6 @@ def possibilidades(num):
         return 0
      
     return (num//4) + 1
-    
-
-
-
 
 for t in range(int(input())):
     num = int(input())
